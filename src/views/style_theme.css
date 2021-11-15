@@ -1,0 +1,122 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    background-color: #f5f5f5;
+    color: #5c5b5b;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    max-width: 2500px; 
+}
+
+a, a:hover {
+    text-decoration: underline;
+}
+
+.navigation a, a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    
+    margin: 0 20% 0 20%;
+}
+
+.header {
+    background-color: #6a7b8b;
+    color: #f5f5f5;
+    display: flex;
+    align-items: center;
+}
+
+.navigation {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    text-align: left;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6a7b8b;
+}
+
+.navigation ul {
+    list-style-type: none;
+}
+
+.navigation li {
+    display: inline-block;
+    padding-right: 40px;
+    font-size: 16px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    color: #f5f5f5;
+}
+
+.modal {
+    margin: 0 20%;
+    padding: 5% 10%;
+    background-color: ;
+}
+
+.form_title {
+    text-align: center;
+}
+
+.modal_contact_form input {
+    width: 100%;
+    margin: 2% 0;
+    padding: 2%;
+    border: none;
+    background-color: #bac1c8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.modal_contact_form input:focus, textarea:focus {
+    background-color: #6a7b8b;
+    border: solid;
+    border-color: #6a7b8b;
+    color: #f5f5f5;
+}
+
+.modal_contact_form input:-webkit-autofill, 
+              input:-webkit-autofill:hover, 
+              input:-webkit-autofill:focus, 
+              input:-webkit-autofill:active {
+    box-shadow: 0 0 0 0px #6a7b8b inset;
+    -webkit-box-shadow: 0 0 0 0px #6a7b8b inset; 
+    -webkit-text-fill-color: #f5f5f5;
+    transition: background-color 5000s ease-in-out 0s;  
+}
+
+.submit {
+    margin: 4%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit_button {
+    padding: 5% 10%;
+    background-color: #6a7b8b;
+    color: #f5f5f5;
+    font-weight: bold;
+    border: none;
+    box-shadow: 0px 2px 5px #5c5b5b;
+    border-radius: 8px; 
+  }
+
+.footer {
+    background-color: #6a7b8b;
+    color: #f5f5f5;
+    font-size: 16px;
+    display: flex;
+}

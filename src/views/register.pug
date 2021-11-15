@@ -1,0 +1,40 @@
+extends login.pug 
+
+block content
+  div.modal
+    div.form_title
+      h2 Create an account 
+    form(action="/login" method="post" class="modal_contact_form")
+      label(for="userName") 
+      |Your user name
+      |
+      input(type="text" id="userName" name="user_name" required)
+    
+      label(for="email") 
+      |E-mail
+      |
+      input(type="text" id="email" name="email" required)
+
+      label(for="firstName") 
+      |First name
+      |
+      input(type="text" id="firstName" name="first_name" required)
+      
+      label(for="lastName") 
+      |Last name
+      |
+      input(type="text" id="lastName" name="last_name" required)
+      
+      label(for="password") 
+      |Password
+      |
+      input(type="text" id="password" name="password" required)
+
+      label(for="confirmPassword") 
+      |Confirm password
+      |
+      input(type="text" id="confirmPassword" name="password_confirm" required)
+      div.submit
+        button(type="submit" class="submit_button") REGISTER ME 
+    p Already a member? 
+     a(href='http://localhost:3000/login') Log in 

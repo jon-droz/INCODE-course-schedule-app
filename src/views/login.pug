@@ -1,0 +1,36 @@
+html
+  head
+    style 
+      include style_theme.css
+    title Mr. Coffee Schedule page
+  header.header
+    div
+      img(src='#') 
+      h1 Schedule Website
+  body
+  main
+  block content
+    div.modal
+      div.form_title
+        h2= message
+        h2 Log in! 
+      form(action="/" method="post" class="modal_contact_form")
+        label(for="email") 
+        |E-mail
+        |
+        input(type="text" id="email" name="email" required)
+        br
+        label(for="password") 
+        |Password
+        |
+        input(type="text" id="password" name="password" required)
+        br
+        div.submit
+          button(type="submit" class="submit_button") LOG IN
+      p Not a member? 
+        a(href='http://localhost:3000/Register') Create an account 
+  
+  footer.footer 
+      div
+        img(src='#')
+        p Mc. Coffee Schedule Website 2021
