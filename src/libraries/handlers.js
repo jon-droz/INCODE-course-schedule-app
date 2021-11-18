@@ -1,5 +1,8 @@
+const dayNums = {
+  1: 'Monday', 2: 'Tuesday', 3: 'Wednesday', 4: 'Thursday', 5: 'Friday', 6: 'Saturday', 7: 'Sunday',
+};
+
 async function userNameExists(username, database) {
-  
   const dbRes = await database.query(
     `SELECT EXISTS( SELECT 1 FROM users WHERE user_name = '${username}')`,
   );
@@ -9,7 +12,6 @@ async function userNameExists(username, database) {
 }
 
 async function emailExists(email, database) {
-
   const dbRes = await database.query(
     `SELECT EXISTS( SELECT 1 FROM users WHERE email = '${email}')`,
   );
@@ -35,5 +37,5 @@ async function scheduleChecker2(newTerm, db) {
 }
 
 module.exports = {
-  userNameExists, emailExists, scheduleChecker2,
+  userNameExists, emailExists, scheduleChecker2, dayNums,
 };

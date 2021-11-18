@@ -1,0 +1,15 @@
+extends index.pug 
+
+block content
+ div.submit
+  a(class="submit_button" href="/schedules/new") Add new schedule
+
+ ul.container 
+    each schedule in schedules
+      div.schedule_item
+        li #{schedule["user_name"]}
+          |
+          | 
+          dayNums= dayNums[schedule.day]  
+          |
+          | #{schedule["start_at"]}-#{schedule["end_at"]}

@@ -1,0 +1,48 @@
+extends index.pug 
+
+block content
+  div.modal 
+    div.form_title
+      h2 Add new schedule 
+    form(action="/schedules" method="post" class="modal_contact_form")
+      label(for="userName") 
+      |Your user name: 
+      |
+      input(type="text" id="userName" name="user_name" )
+      br
+      br
+       
+      input(type="radio" id="Monday" name="day" value="1" )
+      label(for="Monday") Monday
+      br
+      input(type="radio" id="Tuesday" name="day" value="2" )
+      label(for="Tuesday") Tuesday      
+      br
+      input(type="radio" id="Wednesday" name="day" value="3" )
+      label(for="Wednesday") Wednesday
+       br 
+      input(type="radio" id="Thursday" name="day" value="4" )
+      label(for="Thursday") Thursday     
+      br
+      input(type="radio" id="Friday" name="day" value="5" )
+      label(for="Friday") Friday     
+      br
+      input(type="radio" id="Saturday" name="day" value="6" )
+      label(for="Saturday") Saturday     
+      br
+      input(type="radio" id="Sunday" name="day" value="7" )
+      label(for="Sunday") Sunday  
+      br
+      br
+      label(for="start") 
+      |Start at:
+      |
+      input(type="time" id="start" name="start_at" )
+      br
+      label(for="end") 
+      |End at:
+      |
+      input(type="time" id="end" name="end_at" )
+      br
+      div.submit
+        button(type="submit" class="submit_button") SUBMIT 

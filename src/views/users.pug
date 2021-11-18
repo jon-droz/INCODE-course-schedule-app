@@ -1,0 +1,16 @@
+extends index.pug 
+
+block content
+
+  ul.container 
+    each user in users
+      div.schedule_item
+        div
+          li 
+          h2 #{user["user_name"]}
+          |#{user["first_name"]} #{user["last_name"]}
+          - let url = user["user_name"]
+          |
+        div.submit   
+          a(class="submit_button" href="/users/" +url +"/schedule") see schedule  
+          a(class="submit_button" href="/users/" +url) see user profile

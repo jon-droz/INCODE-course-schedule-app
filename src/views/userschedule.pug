@@ -1,0 +1,13 @@
+extends index.pug 
+
+block content
+  div.container
+    h2 #{user["first_name"]} #{user["last_name"]}
+  div.container
+    each schedule in userSchedule
+      div.schedule_item 
+        li 
+          |
+          dayNums= dayNums[schedule.day]
+          | 
+          |#{schedule["start_at"]}-#{schedule["end_at"]}

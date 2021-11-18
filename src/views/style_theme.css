@@ -12,11 +12,12 @@ body {
 }
 
 a, a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
 .navigation a, a:hover {
     text-decoration: none;
+    color: #f5f5f5;
 }
 
 img {
@@ -71,7 +72,7 @@ img {
     text-align: center;
 }
 
-.modal_contact_form input {
+.modal_contact_form input[type="text"], input[type="time"], input[type="password"] {
     width: 100%;
     margin: 2% 0;
     padding: 2%;
@@ -99,13 +100,13 @@ img {
 }
 
 .submit {
-    margin: 4%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .submit_button {
-    padding: 5% 10%;
+    margin: 2%;
+    padding: 2% 5%;
     background-color: #6a7b8b;
     color: #f5f5f5;
     font-weight: bold;
@@ -114,9 +115,27 @@ img {
     border-radius: 8px; 
   }
 
+.schedule_item {
+    width: 100%;
+    margin: 2% 0;
+    padding: 2%;
+    border: none;
+    background-color: #bac1c8;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.schedule_item li {
+    list-style-type: none;
+}
+
 .footer {
     background-color: #6a7b8b;
     color: #f5f5f5;
     font-size: 16px;
     display: flex;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
