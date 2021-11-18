@@ -1,5 +1,5 @@
 const express = require('express');
-
+const path = require('path')
 const app = express();
 const port = 3000;
 
@@ -33,6 +33,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(discoverAuthCookie);
+app.use(express.static(path.join(__dirname, 'assets')))
 
 // ----GET REQUESTS------------------------------
 app.get('/', requireAuth, (req, res) => {
@@ -95,6 +96,7 @@ app.get('/users/:users/schedule', requireAuth, async (req, res) => {
     });
   }
 });
+
 // ----POST REQUESTS------------------------------
 
 app.post('/login', async (req, res) => {

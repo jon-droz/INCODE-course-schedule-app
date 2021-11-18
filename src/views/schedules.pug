@@ -1,15 +1,31 @@
 extends index.pug 
 
 block content
- div.submit
-  a(class="submit_button" href="/schedules/new") Add new schedule
+  div.submit
+    .day 
+      p Mon
+    .day 
+      p Tue
+    .day 
+      p Wed
+    .day
+      p Thu
+    .day 
+      p Fri
+    .day 
+      p Sat
+    .day 
+      p Sun 
 
- ul.container 
-    each schedule in schedules
-      div.schedule_item
-        li #{schedule["user_name"]}
-          |
-          | 
-          dayNums= dayNums[schedule.day]  
-          |
-          | #{schedule["start_at"]}-#{schedule["end_at"]}
+  div.submit
+    a(class="submit_button" href="/schedules/new") Add new schedule
+
+  ul.container
+    div.submit 
+      each schedule in schedules
+        div.schedule_item
+          li  
+            h2 #{schedule["user_name"]} 
+            dayNums= dayNums[schedule.day]  
+            br
+            | #{schedule["start_at"]}-#{schedule["end_at"]}
