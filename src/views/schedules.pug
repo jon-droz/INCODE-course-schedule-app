@@ -2,19 +2,19 @@ extends index.pug
 
 block content
   div.submit
-    .day 
+    .day#1
       p Mon
-    .day 
+    .day#2 
       p Tue
-    .day 
+    .day#3 
       p Wed
-    .day
+    .day#4
       p Thu
-    .day 
+    .day#5 
       p Fri
-    .day 
+    .day#6 
       p Sat
-    .day 
+    .day#7 
       p Sun 
 
   div.submit
@@ -23,9 +23,10 @@ block content
   ul.container
     div.submit 
       each schedule in schedules
-        div.schedule_item
+        div(class="schedule_item" class="day"+schedule.day) 
           li  
             h2 #{schedule["user_name"]} 
             dayNums= dayNums[schedule.day]  
             br
             | #{schedule["start_at"]}-#{schedule["end_at"]}
+          

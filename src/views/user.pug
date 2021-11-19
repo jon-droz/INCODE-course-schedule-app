@@ -5,4 +5,6 @@ block content
     h2 User name:  #{user["user_name"]}
     p First name: #{user["first_name"]} 
     p Last name: #{user["last_name"]}
-    p E-mail: #{user["email"]}
+    p E-mail:
+      - let email= user["email"]
+      a(href="mailto:"+email) #{user["email"]}

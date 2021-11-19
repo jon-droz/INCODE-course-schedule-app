@@ -20,7 +20,7 @@ async function emailExists(email, database) {
   return exists;
 }
 
-async function scheduleChecker2(newTerm, db) {
+async function scheduleChecker(newTerm, db) {
   let available;
 
   const dbRes = await db.query(`SELECT * from schedules
@@ -37,5 +37,5 @@ async function scheduleChecker2(newTerm, db) {
 }
 
 module.exports = {
-  userNameExists, emailExists, scheduleChecker2, dayNums,
+  userNameExists, emailExists, scheduleChecker, dayNums,
 };

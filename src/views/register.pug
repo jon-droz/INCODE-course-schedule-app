@@ -8,22 +8,22 @@ block content
       label(for="userName") 
       |Your user name
       |
-      input(type="text" id="userName" name="user_name" required)
+      input(type="text" id="userName" name="user_name" minlength= "3" required)
     
       label(for="email") 
       |E-mail
       |
-      input(type="text" id="email" name="email" required)
+      input(type="text" id="email" name="email" pattern="^[a-zA-Z1-9-_+.]+@[a-zA-Z1-9-_\.]+\.[a-zA-Z]+$" required)
 
       label(for="firstName") 
       |First name
       |
-      input(type="text" id="firstName" name="first_name" required)
+      input(type="text" id="firstName" name="first_name" minlength= "2" required)
       
       label(for="lastName") 
       |Last name
       |
-      input(type="text" id="lastName" name="last_name" required)
+      input(type="text" id="lastName" name="last_name" minlength= "2" required)
       
       label(for="password") 
       |Password

@@ -2,21 +2,18 @@ const express = require('express');
 const path = require('path')
 const app = express();
 const port = 3000;
-
-// const dbReq = require("./db_req_library.js")
 const SHA256 = require('crypto-js/sha256');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
-
-const { Client } = require('pg');
+const { Pool } = require('pg');
 const {
   generateAuthToken, requireAuth, discoverAuthCookie, authTokens,
 } = require('./libraries/user_auth_handlers.js');
 const {
-  userNameExists, emailExists, scheduleChecker2, dayNums,
+  userNameExists, emailExists, scheduleChecker, dayNums,
 } = require('./libraries/handlers.js');
 
-const db = new Client({
+const db = new Pool({
   database: 'schedule_app',
   user: 'schedules_user',
   password: 'schedules_pass',
@@ -170,21 +167,20 @@ app.post('/schedules', requireAuth, async (req, res) => {
     return;
   }
 
-  if (!await scheduleChecker2(newSchedule, db)) {
+  if (!await scheduleChecker(newSchedule, db)) {
     res.status(406).send('term unavailable');
-  } else {
-    const q = `INSERT INTO 
+  }
+  const q = `INSERT INTO 
           schedules (user_name, day, start_at, end_at) 
           VALUES 
           ('${newSchedule.user_name}', '${newSchedule.day}','${newSchedule.start_at}', '${newSchedule.end_at}')`;
 
-    db.query(
-      q,
-      (dbErr, dbRes) => {
-        res.redirect('schedules');
-      },
-    );
-  }
+  db.query(
+    q,
+    (dbErr, dbRes) => {
+      res.redirect('schedules');
+    },
+  );
 });
 
 // ----START SERVER-------------------------------
