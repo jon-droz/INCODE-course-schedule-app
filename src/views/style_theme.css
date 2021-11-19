@@ -4,6 +4,7 @@
 
 body {
     margin: auto;
+    margin-bottom: 100px;
     background-color: #f5f5f5;
     color: #5c5b5b;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -36,6 +37,7 @@ img {
     color: #f5f5f5;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .navigation {
@@ -146,15 +148,20 @@ img {
 }
 
 .footer {
+    position: fixed;
+    padding: 5px;
     background-color: #6a7b8b;
     color: #f5f5f5;
     font-size: 1rem;
     bottom: 0;
     left: 0;
     width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 .logo {
   margin: 10px;
-  display: inline-block;
 }
