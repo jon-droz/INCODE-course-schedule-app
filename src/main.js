@@ -13,13 +13,7 @@ const {
   userNameExists, emailExists, scheduleChecker, dayNums,
 } = require('./libraries/handlers.js');
 
-const db = new Pool({
-  database: 'schedule_app',
-  user: 'schedules_user',
-  password: 'schedules_pass',
-  host: 'localhost',
-  port: 5432,
-});
+const db = new Pool();
 
 db.connect();
 

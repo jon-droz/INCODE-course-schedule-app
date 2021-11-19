@@ -133,6 +133,7 @@ img {
 
 .schedule_item {
     display: flex;
+    justify-content: center;
     width: 40%;
     margin: 2% 2%;
     padding: 2%;
