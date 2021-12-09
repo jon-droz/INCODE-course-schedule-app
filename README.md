@@ -11,7 +11,7 @@ PostgreSQL
 - user profiles
 - hashing passwords
 - GET/POST HTTP requests
-# To dos
+# To-dos
 - schedule calendar on the home page
 - deleting schedules
 - search function
